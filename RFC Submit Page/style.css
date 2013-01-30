@@ -1,0 +1,68 @@
+/*
+	________________________________________
+	|									   |
+	|	Making the form look pretty :D	   |
+	|______________________________________|
+*/
+#submit-form
+{
+	background-color: #B22222;
+	width: 465px;
+	padding: 20px;
+	margin: 40px auto;
+	border: 5px solid #000000;
+	-moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    position:relative;
+}
+#submit-form input, 
+#submit-form textarea,  
+#submit-form label
+{  
+    font-size:15px;  
+    margin-bottom:3px;
+    color:#000;
+    font-family: Verdana;
+}  
+#submit-form input, 
+#submit-form textarea
+{  
+    width:450px;  
+    border:1px solid #CEE1E8;  
+    margin-bottom:20px;
+    padding:4px;
+}
+#submit-form #submit-button
+{  
+    width:100px;
+    color:#FFF;
+    border:none;
+    float:right;
+    margin-bottom:100px;
+    margin-right:6px;
+    background-color:#555;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:15px;
+}
+#submit-form label
+{
+	margin-bottom: 3px;
+	display: block;
+	color:#FFF;
+}
+#submit-form #submit-button:hover
+{  
+    background-color: #333;  
+}
+#submit-form textarea
+{
+	resize:vertical;
+	height: 300px;
+}
+#submit-form #submit-button:active
+{
+    position:relative;
+    top:1px;
+}
