@@ -1,20 +1,18 @@
-/*
-	________________________________________
-	|									   |
-	|	Making the form look pretty :D	   |
-	|______________________________________|
+/*	______________________________________
+	|									 |
+	|	Making the form look pretty :D   |
+	|____________________________________|
 */
 #submit-form
 {
 	background-color: #B22222;
 	width: 465px;
-	padding: 20px;
+	padding: 40px;
 	margin: 40px auto;
 	border: 5px solid #000000;
 	-moz-border-radius:15px;
     -webkit-border-radius:15px;
     border-radius:15px;
-    position:relative;
 }
 #submit-form input, 
 #submit-form textarea,  
@@ -52,17 +50,49 @@
 	display: block;
 	color:#FFF;
 }
-#submit-form #submit-button:hover
-{  
-    background-color: #333;  
-}
 #submit-form textarea
 {
 	resize:vertical;
 	height: 300px;
 }
+#submit-form #submit-button:hover
+{  
+    background-color: #333;  
+}
 #submit-form #submit-button:active
 {
     position:relative;
     top:1px;
+}
+#title
+{
+    font-family: Verdana;
+    font-size: 24px;
+    margin-left: : auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: -10px;
+}
+#notice
+{
+    font-family: Verdana;
+    font-size: 20px;
+    text-align: center;
+}
+#user
+{
+    font-size: 14px;
+    margin: -7px;
+}
+#admin
+{
+    font-size: 14px;
+    margin-top: -10px;
+    margin-right: -7px;
+    float: right;
+}
+#unauth
+{
+    background-image:url('images/atlas.jpg');
+    color: #FFF;
 }
