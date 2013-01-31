@@ -24,9 +24,9 @@ if($_POST && !empty($_POST['username']) && !empty($_POST['password']) && !empty(
     //The $hash variable will contain the hash of the password
     $hash = $hasher->HashPassword($password);
 
-    //if (strlen($hash) >= 20) { 
+    if (strlen($hash) >= 20) { 
         $result = $user->register_user($key, $username, $hash);
-    //}
+    }
 }
 ?>
 
@@ -56,3 +56,4 @@ if($_POST && !empty($_POST['username']) && !empty($_POST['password']) && !empty(
 If you don't have a key, you cannot register, please request one from Phoenix, awesome271828, Dilbertfan, LupusMalus or Kitcat490.
 </body>
 </html>
+ml>

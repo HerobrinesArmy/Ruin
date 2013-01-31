@@ -8,12 +8,20 @@ session_start();
 $sid = session_id();
 
 require 'classes/user.php';
+require 'includes/PasswordHash.php';
+
 $user = new user();
+$hasher = new PasswordHash(8, false);
 
 if($_POST && !empty($_POST['username']) && !empty($_POST['password'])) {
+
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $hash = $hasher->HashPassword($password);
     
-    $result = $user->validate_user($_POST['username'], $_POST['password']);
-    $_SESSION['username'] = $_POST['username'];
+    $result = $user->validate_user($username, $password);
+    $_SESSION['username'] = $username;
 }
 
 ?>

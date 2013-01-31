@@ -52,7 +52,6 @@ if(empty($_SESSION['username'])) {
             <input type="text" name="updated" placeholder="The name of the RFC updated by this, leave blank if none."/>
             <input id="submit-button" type="submit" value="Submit"/>  
             <?php 
-            print $result;
                 if(isset($result)) {
                     if($result) {
                         echo "<div id=notice>Submission successful!</div>";
@@ -63,6 +62,9 @@ if(empty($_SESSION['username'])) {
                 }
             ?> 
         </form>
+    </div>
+</body>
+</html>
     </div>
 </body>
 </html>
