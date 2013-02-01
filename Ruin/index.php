@@ -13,6 +13,11 @@ require 'includes/PasswordHash.php';
 $user = new user();
 $hasher = new PasswordHash(8, false);
 
+//Comment this out if you need to test the login page whilst logged in.
+if(isset($_SESSION['status'])) {
+    header('location: submit.php');
+}
+
 if($_POST && !empty($_POST['username']) && !empty($_POST['password'])) {
 
     $username = $_POST['username'];
@@ -21,7 +26,7 @@ if($_POST && !empty($_POST['username']) && !empty($_POST['password'])) {
     $hash = $hasher->HashPassword($password);
     
     $result = $user->validate_user($username, $password);
-    
+
     if($result != "Wrong user/password combination.") {
         $_SESSION['username'] = $username;
     } 
