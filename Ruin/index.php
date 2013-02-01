@@ -21,7 +21,10 @@ if($_POST && !empty($_POST['username']) && !empty($_POST['password'])) {
     $hash = $hasher->HashPassword($password);
     
     $result = $user->validate_user($username, $password);
-    $_SESSION['username'] = $username;
+    
+    if($result != "Wrong user/password combination.") {
+        $_SESSION['username'] = $username;
+    } 
 }
 
 ?>
