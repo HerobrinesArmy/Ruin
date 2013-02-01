@@ -5,6 +5,8 @@ Possible Additions:
 Next Up:
 *Method of displaying RFCs in a next & previous manner
 *Search function for RFCs
+*Allowing users to comment on RFCs (submitted RFCs only, comments won't be allowed on accepted RFCs)
+*Prevent user from registering if username taken
 
 Working On:
 *Automatic redirect from the login page if user already has a session
