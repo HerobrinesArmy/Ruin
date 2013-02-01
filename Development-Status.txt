@@ -1,16 +1,16 @@
 Possible Additions:
-*Integrating a HA chat similar to HBs sig somewhere on the page.
+*Integrating a HA chat similar to HBs sig somewhere on the page
 
 Next Up:
-*Method of displaying RFCs in a next & previous manner.
+*Method of displaying RFCs in a next & previous manner
 *Search function for RFCs
 
 Working On:
-*Automatic redirect from the login page if user already has a session.
-*Write "Submission Successful" on submit.php form upon sending to 
-database.
+*Automatic redirect from the login page if user already has a session
+*Handling of empty form fields
 
 Recently Finished:
+*Write "Submission Successful" on submit.php form upon sending to database
 *Password Hashing
 *Login page
 *Sessions

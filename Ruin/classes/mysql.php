@@ -86,9 +86,8 @@ class mysql {
 
 		if($stmt = $this->conn->prepare($query)) {
 			$stmt->bind_param('ssss', $nm, $desc, $upd, $un);
-			$stmt->execute();
 
-			if($stmt->fetch()) {
+			if($stmt->execute()) {
 				$stmt->close();
 				return true;
 			}
