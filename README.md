@@ -6,8 +6,8 @@ You're damned right it's optional, Github. What do I look like, someone who has 
 
 ## About
 This repo is the home of Ruin. Ruin is the RFC-like system that is being developed for Herobrine's Army. It was decided that
-ChaOS, Entropy and Discord needed some standardisation, with an RFC-like system having the perfect functionality to provide said
-standardisation.
+ChaOS, Entropy and Discord needed some standardisation. An RFC-like system having the perfect functionality to provide said
+standardisation, so it was built.
 
 It is hosted at [Lupus's Server][0xha-data] and is currently being worked on by Phoenix and Lupus, however it is far from finished,
 so take what you see with a pinch of salt.
