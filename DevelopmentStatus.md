@@ -12,7 +12,7 @@ Development Status
 * Allowing users to comment on RFCs (submitted RFCs only, comments won't be allowed on accepted RFCs)
 * Prevent user from registering if username taken
 
-###Working On:
+### Working On:
 * Automatic redirect from the login page if user already has a session
 * Handling of empty form fields
 
