@@ -1,6 +1,7 @@
+Possible Additions:
+*Integrating a HA chat similar to HBs sig somewhere on the page.
+
 Next Up:
-*Possibly integrating a HA chat similar to HBs sig somewhere on the 
-page.
 *Method of displaying RFCs in a next & previous manner.
 *Search function for RFCs
 
@@ -10,9 +11,11 @@ Working On:
 database.
 
 Recently Finished:
+*Password Hashing
 *Login page
 *Sessions
 *Administrator recognisation
 *Unauthorised Page (a redirect)
 *Register Page
 *Submit Form
+*Logout Page
