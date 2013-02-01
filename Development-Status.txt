@@ -1,0 +1,16 @@
+Next Up:
+*Method of displaying RFCs in a next & previous manner.
+*Search function for RFCs
+
+Working On:
+*Prevent user from "logging in again".
+*Write "Submission Successful" on submit.php form upon sending to 
+database.
+
+Recently Finished:
+*Login page
+*Sessions
+*Administrator recognisation
+*Unauthorised Page (a redirect)
+*Register Page
+*Submit Form
