@@ -2,6 +2,7 @@ Repo
 ====
 
 You're damned right it's optional, Github. What do I look like, someone who has time to come up with descriptions for things?
+~ Herobrine.
 
 ## About
 This repo is the home of Ruin. Ruin is the RFC-like system that is being developed for Herobrine's Army. It was decided that
