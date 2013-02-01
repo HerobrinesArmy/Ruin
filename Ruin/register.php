@@ -56,4 +56,3 @@ if($_POST && !empty($_POST['username']) && !empty($_POST['password']) && !empty(
 If you don't have a key, you cannot register, please request one from Phoenix, awesome271828, Dilbertfan, LupusMalus or Kitcat490.
 </body>
 </html>
-ml>
