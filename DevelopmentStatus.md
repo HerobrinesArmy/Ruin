@@ -15,6 +15,7 @@ Development Status
 ### Working On:
 * Automatic redirect from the login page if user already has a session
 * Handling of empty form fields
+* Handling of any username entry.
 
 ### Recently Finished:
 * Write "Submission Successful" on submit.php form upon sending to database
