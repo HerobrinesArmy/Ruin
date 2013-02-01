@@ -1,9 +1,11 @@
 Next Up:
+*Possibly integrating a HA chat similar to HBs sig somewhere on the 
+page.
 *Method of displaying RFCs in a next & previous manner.
 *Search function for RFCs
 
 Working On:
-*Prevent user from "logging in again".
+*Automatic redirect from the login page if user already has a session.
 *Write "Submission Successful" on submit.php form upon sending to 
 database.
 
