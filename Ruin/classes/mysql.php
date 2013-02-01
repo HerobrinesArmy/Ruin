@@ -46,13 +46,13 @@ class mysql {
 				WHERE username = ? AND password = ?
 				LIMIT 1";
 
-		/* Pepares the query and stores it in $stmt, then replaces '?' in $query with variables $un and $pwd
-		'ss' means that there are 2 strings to put into $query ($un and $pwd) */
+		/* Prepares the query and stores it in $stmt, then replaces '?' in $query with variables $un and $pwd
+		'ss' means that there are 2 strings to put into $query ($un and $pwd) also executes the query */
 		if($stmt = $this->conn->prepare($query)) {
 			$stmt->bind_param('ss', $un, $pwd);
 			$stmt->execute();
 
-			//Sends the MySQL script to the server and if username and password match a record, the connection is closed and true is returned.
+			//Fetches the result of the query from the server and if username and password match a record, the connection is closed and true is returned.
 			if($stmt->fetch()) {
 				$stmt->close();
 				return true;
