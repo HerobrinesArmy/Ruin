@@ -24,6 +24,9 @@ class mysql {
 		if($this->check_user_exists($un)) {
 			return "Username taken.";
 		}
+		elseif(!$this->verify_key($key)) {
+			return "Invalid key.";
+		}
 		else {
 			$query = "UPDATE members
 		 			SET username = ?, password = ?
@@ -34,8 +37,26 @@ class mysql {
 
 				if($stmt->execute()) {
 					$stmt->close();
-					return true;
+					header('location: index.php');
 				}
+			}
+		}
+	}
+
+	function verify_key($key)
+	{
+		$query = "SELECT *
+				FROM members
+				WHERE register_key = ?
+				LIMIT 1";
+
+		if($stmt = $this->conn->prepare($query)) {
+			$stmt->bind_param('s', $key);
+			$stmt->execute();
+
+			if($stmt->fetch()) {
+				$stmt->close();
+				return true;
 			}
 		}
 	}

@@ -27,15 +27,22 @@ class user {
 
 		$result = $mysql->new_user($key, $un, $pwd);
 
-		if(isset($result)) {
-			if($result == "Username taken.") {
-				return $result;
-			}
-			else if($result) {
-				//header("location: index.php");
-				return "YAY";
-			} 
-		}
+		return $result;
+
+		// if(isset($result)) {
+		// 	if($result) {
+		// 		//return $result;
+		// 		return $result;
+		// 	}
+		// 	elseif($result == "Invalid key.") {
+		// 		//return $result;
+		// 		return 2;
+		// 	}
+		// 	elseif($result == "Username taken.") {
+		// 		//header("location: index.php");
+		// 		return 4;
+		// 	} 
+		// }
 	}
 }
 ?>
