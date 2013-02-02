@@ -36,11 +36,11 @@ if($_POST && !empty($_POST['username']) && !empty($_POST['password']) && !empty(
 <link rel="stylesheet" type="text/css" href="style.css">
 
 <head>
-<title>Phoenix's Basic Register Page</title>
+<title>Phoenix's Basic Registration Page</title>
 </head>
 
 <body>
-    <div id="title">Registering Page</div>
+    <div id="title">Registration Page</div>
         <div id="submit-form">
             <form method="post" action="">
                 <label for="updated">Registration Key:</label>
