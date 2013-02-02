@@ -2,7 +2,6 @@ Development Status
 ==================
 
 ### Possible Additions:
-
 * Integrating a HA chat similar to HBs sig somewhere on the page
 * Not allowing IE users to use the system
 
