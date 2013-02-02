@@ -10,7 +10,6 @@ Development Status
 * Method of displaying RFCs in a next & previous manner
 * Search function for RFCs
 * Allowing users to comment on RFCs (submitted RFCs only, comments won't be allowed on accepted RFCs)
-* Prevent user from registering if username taken
 * Adding a "project" column on the database so that an RFC is tied to a specific project. Will be a dropdown box on the form.
 
 ### Working On:
@@ -18,6 +17,8 @@ Development Status
 * Handling of empty form fields
 
 ### Recently Finished:
+* Handling invalid keys
+* Prevent user from registering if username taken
 * Handling of any username entry
 * Write "Submission Successful" on submit.php form upon sending to database
 * Password Hashing
