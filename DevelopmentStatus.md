@@ -10,13 +10,13 @@ Development Status
 * Method of displaying RFCs in a next & previous manner
 * Search function for RFCs
 * Allowing users to comment on RFCs (submitted RFCs only, comments won't be allowed on accepted RFCs)
-* Adding a "project" column on the database so that an RFC is tied to a specific project. Will be a dropdown box on the form.
 
 ### Working On:
-* Automatic redirect from the login page if user already has a session
 * Handling of empty form fields
+* Adding a "project" column on the database so that an RFC is tied to a specific project. Will be a dropdown box on the form.
 
 ### Recently Finished:
+* Automatic redirect from the login page if user already has a session
 * Handling invalid keys
 * Prevent user from registering if username taken
 * Handling of any username entry
