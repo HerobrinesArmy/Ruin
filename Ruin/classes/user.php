@@ -25,9 +25,17 @@ class user {
 	{
 		$mysql = new mysql();
 
-		if($mysql->new_user($key, $un, $pwd)) {
-			header("location: index.php");
-		} else return "Enter a valid key.";
+		$result = $mysql->new_user($key, $un, $pwd);
+
+		if(isset($result)) {
+			if($result == "Username taken.") {
+				return $result;
+			}
+			else if($result) {
+				//header("location: index.php");
+				return "YAY";
+			} 
+		}
 	}
 }
 ?>

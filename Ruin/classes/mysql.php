@@ -21,19 +21,23 @@ class mysql {
 
 	function new_user($key, $un, $pwd)
 	{
-		$query = "UPDATE members
-		 		SET username = ?, password = ?
-		 		WHERE register_key = ?";
+		if($this->check_user_exists($un)) {
+			return "Username taken.";
+		}
+		else {
+			$query = "UPDATE members
+		 			SET username = ?, password = ?
+		 			WHERE register_key = ?";
 
 			if($stmt = $this->conn->prepare($query)) {
 				$stmt->bind_param('sss', $un, $pwd, $key);
-				$stmt->execute();
 
-				if($stmt->fetch()) {
+				if($stmt->execute()) {
 					$stmt->close();
 					return true;
 				}
 			}
+		}
 	}
 
 	/* Function to check given username and password against the table in the database given by constants.php
@@ -59,6 +63,24 @@ class mysql {
 			}
 		}
 
+	}
+
+	function check_user_exists($un)
+	{
+		$query = "SELECT * 
+				FROM members
+				WHERE username = ?
+				LIMIT 1";
+		
+		if($stmt = $this->conn->prepare($query)) {
+			$stmt->bind_param('s', $un);
+			$stmt->execute();
+
+			if($stmt->fetch()) {
+				$stmt->close();
+				return true;
+			} else return false;
+		}
 	}
 
 	function verify_admin($un, $pwd)
