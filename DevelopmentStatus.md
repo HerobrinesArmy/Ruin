@@ -28,3 +28,7 @@ Development Status
 * Register Page
 * Submit Form
 * Logout Page
+
+#### Version Numbers:
+I will start using version numbers when I'm happy with the functionality of Ruin. From then on I will use things like 
+`v0.0.1` for example.
