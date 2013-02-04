@@ -8,13 +8,13 @@
 * Method of displaying RFCs in a next & previous manner
 * Search function for RFCs
 * Allowing users to comment on RFCs (submitted RFCs only, comments won't be allowed on accepted RFCs)
-* Not allowing the system to be used by Internet Explorer
 
 ### Working On:
 * Handling of empty form fields
 * Adding a "project" column on the database so that an RFC is tied to a specific project. Will be a dropdown box on the form.
 
 ### Recently Finished:
+* Not allowing the system to be used by Internet Explorer
 * Automatic redirect from the login page if user already has a session
 * Handling invalid keys
 * Prevent user from registering if username taken
