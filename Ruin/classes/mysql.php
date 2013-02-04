@@ -12,13 +12,15 @@ class mysql {
 	//Variable to hold MySQL connection.
 	private $conn;
 
-	/* Constructor for this class. Instances of this class connect to a MySQL database, using the details in
-	constants.php */
+	#Constructor for this class. Instances of this class connect to a MySQL database, using the details in
+	#constants.php
 	function __construct()
 	{
 		$this->conn = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME) or die('There was a problem connecting.');
 	}
 
+	#Function to create a new user. It checks first if the username is valid, then if the key is valid. If both are valid
+	#it then creates the user and redirects them to index.php so that they can use their shiny new account.
 	function new_user($key, $un, $pwd)
 	{
 		if($this->check_user_exists($un)) {
@@ -43,6 +45,7 @@ class mysql {
 		}
 	}
 
+	#Used to verify keys inputted by the user.
 	function verify_key($key)
 	{
 		$query = "SELECT *
@@ -61,8 +64,8 @@ class mysql {
 		}
 	}
 
-	/* Function to check given username and password against the table in the database given by constants.php
-	returns true if successful */
+	#Function to check given username and password against the table in the database given by constants.php
+	#returns true if successful.
 	function verify_Username_and_Pass($un, $pwd)
 	{
 		//MySQL query checking to see if there is a record matching the username and password given.
@@ -71,8 +74,8 @@ class mysql {
 				WHERE username = ? AND password = ?
 				LIMIT 1";
 
-		/* Prepares the query and stores it in $stmt, then replaces '?' in $query with variables $un and $pwd
-		'ss' means that there are 2 strings to put into $query ($un and $pwd) also executes the query */
+		#Prepares the query and stores it in $stmt, then replaces '?' in $query with variables $un and $pwd
+		#'ss' means that there are 2 strings to put into $query ($un and $pwd) also executes the query.
 		if($stmt = $this->conn->prepare($query)) {
 			$stmt->bind_param('ss', $un, $pwd);
 			$stmt->execute();
