@@ -8,6 +8,7 @@
 * Method of displaying RFCs in a next & previous manner
 * Search function for RFCs
 * Allowing users to comment on RFCs (submitted RFCs only, comments won't be allowed on accepted RFCs)
+* Not allowing the system to be used by Internet Explorer
 
 ### Working On:
 * Handling of empty form fields
