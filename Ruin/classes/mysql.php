@@ -88,7 +88,7 @@ class mysql {
 		}
 
 	}
-
+	
 	function check_user_exists($un)
 	{
 		$query = "SELECT * 
