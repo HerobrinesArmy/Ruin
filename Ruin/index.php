@@ -1,5 +1,8 @@
 <?php 
 
+require 'classes/user.php';
+require 'includes/PasswordHash.php';
+
 //Used for debugging, can remove.
 ini_set('display_errors',1); 
 error_reporting(E_ALL);
@@ -7,11 +10,12 @@ error_reporting(E_ALL);
 session_start();
 $sid = session_id();
 
-require 'classes/user.php';
-require 'includes/PasswordHash.php';
-
 $user = new user();
 $hasher = new PasswordHash(8, false);
+
+if($user->get_user_browser() == "ie") {
+    header("location: ie_reject.php");
+}
 
 //Comment this out if you need to test the login page whilst logged in.
 if(isset($_SESSION['status'])) {

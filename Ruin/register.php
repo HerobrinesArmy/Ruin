@@ -10,6 +10,10 @@ require 'classes/user.php';
 $user = new user();
 $hasher = new PasswordHash(8, false);
 
+if($user->get_user_browser() == "ie") {
+    header("location: ie_reject.php");
+}
+
 if($_POST && !empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['key'])) {
 
     $username = $_POST['username'];
